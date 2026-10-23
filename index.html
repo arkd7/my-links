@@ -3,34 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Мои ссылки</title>
+<title>Мои ссылки 🌈</title>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 24px;
   min-height: 100vh;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f1f5fb;
+
+  /* Радужный фон в цветах флага ЛГБТ */
+  background: linear-gradient(
+    135deg,
+    #e40303,
+    #ff8c00,
+    #ffed00,
+    #008026,
+    #004dff,
+    #750787
+  );
+
+  background-size: 300% 300%;
+  animation: rainbow 12s ease infinite;
+
   font-family: Arial, sans-serif;
   color: #17243a;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 main {
   width: 100%;
   max-width: 400px;
-  box-sizing: border-box;
   padding: 30px 22px;
   border-radius: 24px;
   background: white;
   text-align: center;
-  box-shadow: 0 8px 30px #17365d15;
+
+  box-shadow: 0 8px 30px #17365d35;
 }
 
 h1 {
+  margin-top: 0;
   font-size: 28px;
 }
 
@@ -44,15 +74,24 @@ a {
   margin-top: 18px;
   padding: 19px 12px;
   border-radius: 14px;
+
   color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  transition: opacity 0.2s;
+
+  transition: transform 0.2s, opacity 0.2s,
+              box-shadow 0.2s;
 }
 
 a:hover {
-  opacity: 0.85;
+  transform: translateY(-3px);
+  opacity: 0.92;
+  box-shadow: 0 6px 15px #00000020;
+}
+
+a:active {
+  transform: scale(0.98);
 }
 
 .telegram {
@@ -66,34 +105,58 @@ a:hover {
 .call {
   background: #20a464;
 }
+
+/* Удобное отображение на маленьких экранах */
+@media (max-width: 360px) {
+  main {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+}
 </style>
 </head>
 
 <body>
+
 <main>
-  <h1>Добро пожаловать!</h1>
+  <h1>Добро пожаловать! 🌈</h1>
+
   <p>Выберите, куда хотите перейти</p>
 
-  <a class="telegram"
-     href="https://t.me/motorina_psuchology"
-     target="_blank"
-     rel="noopener noreferrer">
+  <a
+    class="telegram"
+    href="https://t.me/motorina_psuchology"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     ✈️ Мой Telegram-канал
   </a>
 
-  <a class="disk"
-     href="https://disk.yandex.ru/client/disk?from=tableau_yabro"
-     target="_blank"
-     rel="noopener noreferrer">
+  <a
+    class="disk"
+    href="https://disk.yandex.ru/client/disk?from=tableau_yabro"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     ☁️ Мой Яндекс Диск
   </a>
 
-  <a class="call"
-     href="https://images.meme-arsenal.com/550a6cbc24fe30f86071b5e52254588d.jpg"
-     target="_blank"
-     rel="noopener noreferrer">
-    📞 Позвонить мне хуйня
+  <a
+    class="call"
+    href="https://ru.pinterest.com/ideas/%D0%B3%D0%BE%D1%80%D0%B8%D0%BB%D0%BB%D0%B0-%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D1%8B%D0%B2%D0%B0%D0%B5%D1%82-%D1%84%D0%B0%D0%BA/942113457596/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    📞 Позвонить мне
   </a>
 </main>
+
 </body>
 </html>
