@@ -18,7 +18,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  /* Радужный фон в цветах флага ЛГБТ */
+  /* Анимированный радужный фон */
   background: linear-gradient(
     135deg,
     #e40303,
@@ -55,7 +55,6 @@ main {
   border-radius: 24px;
   background: white;
   text-align: center;
-
   box-shadow: 0 8px 30px #17365d35;
 }
 
@@ -80,8 +79,10 @@ a {
   font-size: 18px;
   font-weight: bold;
 
-  transition: transform 0.2s, opacity 0.2s,
-              box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s,
+    box-shadow 0.2s;
 }
 
 a:hover {
@@ -94,6 +95,7 @@ a:active {
   transform: scale(0.98);
 }
 
+/* Кнопки */
 .telegram {
   background: #229ed9;
 }
@@ -106,7 +108,15 @@ a:active {
   background: #20a464;
 }
 
-/* Удобное отображение на маленьких экранах */
+.relax {
+  background: linear-gradient(
+    135deg,
+    #e84393,
+    #9b59b6
+  );
+}
+
+/* Адаптация под смартфоны */
 @media (max-width: 360px) {
   main {
     padding: 24px 16px;
@@ -118,6 +128,17 @@ a:active {
 
   a {
     font-size: 16px;
+  }
+}
+
+/* Учитываем настройки уменьшения анимации */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+
+  a {
+    transition: none;
   }
 }
 </style>
@@ -156,6 +177,16 @@ a:active {
   >
     📞 Позвонить мне
   </a>
+
+  <a
+    class="relax"
+    href="https://sex-studentki.vodka/rus"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    💆‍♀️ Релакс
+  </a>
+
 </main>
 
 </body>
