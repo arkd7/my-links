@@ -4,13 +4,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Мои ссылки</title>
+<title>Людмила Николаевна | Мои ссылки</title>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 24px;
   min-height: 100vh;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,71 +22,126 @@ body {
   font-family: Arial, sans-serif;
   color: #17243a;
 }
+
 main {
   width: 100%;
   max-width: 400px;
-  box-sizing: border-box;
-  padding: 30px 22px;
+  padding: 32px 22px;
   border-radius: 24px;
   background: white;
   text-align: center;
   box-shadow: 0 8px 30px #17365d15;
 }
-h1 { font-size: 28px; }
-p { color: #657087; line-height: 1.5; }
-a.button {
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #657087;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.button {
   display: block;
-  margin-top: 18px;
+  margin-top: 16px;
   padding: 19px 12px;
   border-radius: 14px;
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
+  transition: 0.2s;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
 }
-.telegram { background: #229ed9; }
-.disk { background: #174ea6; }
-.contact { background: #239b70; cursor: pointer; }
+
+.button:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.telegram {
+  background: #229ed9;
+}
+
+.disk {
+  background: #174ea6;
+}
+
+.personal {
+  background: #168cba;
+}
+
+.contact {
+  background: #239b70;
+}
 
 #contactInfo {
   display: none;
   margin-top: 20px;
-  padding: 18px 10px;
+  padding: 20px 10px;
   border-radius: 14px;
   background: #edf8f3;
-  line-height: 1.7;
+  line-height: 1.8;
 }
+
+#contactInfo strong {
+  font-size: 18px;
+}
+
 #contactInfo a {
   color: #174ea6;
   font-size: 21px;
   font-weight: bold;
   text-decoration: none;
 }
+
 </style>
 </head>
+
 <body>
 
 <main>
+
 <h1>Добро пожаловать!</h1>
+
 <p>Выберите, куда хотите перейти</p>
 
 <a class="button telegram"
-href="https://t.me/motorina_psuchology">
+href="https://t.me/motorina_psuchology"
+target="_blank">
 ✈️ Мой Telegram-канал
 </a>
 
 <a class="button disk"
-href="https://disk.yandex.ru/client/disk?from=tableau_yabro">
+href="https://disk.yandex.ru/client/disk?from=tableau_yabro"
+target="_blank">
 ☁️ Мой Яндекс Диск
 </a>
 
-<a class="button contact" onclick="showContact()">
-📞 Связаться со мной
+<a class="button personal"
+href="https://t.me/Motorina_pro"
+target="_blank">
+💬 Написать мне в Telegram
 </a>
 
+<button class="button contact"
+onclick="showContact()">
+📞 Связаться со мной
+</button>
+
 <div id="contactInfo">
-  <strong>Людмила Николаевна</strong><br>
-  📞 <a href="tel:+79094585433">8 909 458 54 33</a>
+  <strong>Людмила Николаевна</strong>
+  <br>
+  📞
+  <a href="tel:+79094585433">
+    8 909 458 54 33
+  </a>
 </div>
 
 </main>
@@ -90,6 +149,7 @@ href="https://disk.yandex.ru/client/disk?from=tableau_yabro">
 <script>
 function showContact() {
   const info = document.getElementById('contactInfo');
+
   info.style.display =
     info.style.display === 'block' ? 'none' : 'block';
 }
@@ -97,4 +157,5 @@ function showContact() {
 
 </body>
 </html>
+
 
