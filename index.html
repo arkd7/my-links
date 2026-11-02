@@ -3,191 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Мои ссылки 🌈</title>
-
+<title>Мои ссылки</title>
 <style>
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 24px;
   min-height: 100vh;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Анимированный радужный фон */
-  background: linear-gradient(
-    135deg,
-    #e40303,
-    #ff8c00,
-    #ffed00,
-    #008026,
-    #004dff,
-    #750787
-  );
-
-  background-size: 300% 300%;
-  animation: rainbow 12s ease infinite;
-
+  background: #f1f5fb;
   font-family: Arial, sans-serif;
   color: #17243a;
 }
-
-@keyframes rainbow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 main {
   width: 100%;
   max-width: 400px;
+  box-sizing: border-box;
   padding: 30px 22px;
   border-radius: 24px;
   background: white;
   text-align: center;
-  box-shadow: 0 8px 30px #17365d35;
+  box-shadow: 0 8px 30px #17365d15;
 }
-
-h1 {
-  margin-top: 0;
-  font-size: 28px;
-}
-
-p {
-  color: #657087;
-  line-height: 1.5;
-}
-
+h1 { font-size: 28px; }
+p { color: #657087; line-height: 1.5; }
 a {
   display: block;
   margin-top: 18px;
   padding: 19px 12px;
   border-radius: 14px;
-
   color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-
-  transition:
-    transform 0.2s,
-    opacity 0.2s,
-    box-shadow 0.2s;
 }
-
-a:hover {
-  transform: translateY(-3px);
-  opacity: 0.92;
-  box-shadow: 0 6px 15px #00000020;
-}
-
-a:active {
-  transform: scale(0.98);
-}
-
-/* Кнопки */
-.telegram {
-  background: #229ed9;
-}
-
-.disk {
-  background: #174ea6;
-}
-
-.call {
-  background: #20a464;
-}
-
-.relax {
-  background: linear-gradient(
-    135deg,
-    #e84393,
-    #9b59b6
-  );
-}
-
-/* Адаптация под смартфоны */
-@media (max-width: 360px) {
-  main {
-    padding: 24px 16px;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-
-  a {
-    font-size: 16px;
-  }
-}
-
-/* Учитываем настройки уменьшения анимации */
-@media (prefers-reduced-motion: reduce) {
-  body {
-    animation: none;
-  }
-
-  a {
-    transition: none;
-  }
-}
+.telegram { background: #229ed9; }
+.disk { background: #174ea6; }
 </style>
 </head>
-
 <body>
-
 <main>
-  <h1>Добро пожаловать! 🌈</h1>
-
-  <p>Выберите, куда хотите перейти</p>
-
-  <a
-    class="telegram"
-    href="https://t.me/motorina_psuchology"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    ✈️ Мой Telegram-канал
-  </a>
-
-  <a
-    class="disk"
-    href="https://disk.yandex.ru/client/disk?from=tableau_yabro"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    ☁️ Мой Яндекс Диск
-  </a>
-
-  <a
-    class="call"
-    href="https://images.meme-arsenal.com/550a6cbc24fe30f86071b5e52254588d.jpg"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📞 Позвонить мне
-  </a>
-
-  <a
-    class="relax"
-    href="https://sex-studentki.vodka/rus"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    💆‍♀️ Релакс
-  </a>
-
+<h1>Добро пожаловать!</h1>
+<p>Выберите, куда хотите перейти</p>
+<a class="telegram"
+href="https://t.me/motorina_psuchology">
+✈️ Мой Telegram-канал
+</a>
+<a class="disk"
+href="https://disk.yandex.ru/client/disk?from=tableau_yabro">
+☁️ Мой Яндекс Диск
+</a>
 </main>
-
 </body>
 </html>
