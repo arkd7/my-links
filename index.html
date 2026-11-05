@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Людмила Николаевна | Мои ссылки</title>
+<title>Мои ссылки</title>
 
 <style>
 * {
@@ -18,24 +18,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f1f5fb;
+
+  /* Красивый градиентный фон */
+  background:
+    radial-gradient(circle at 15% 20%, #fbc2eb 0%, transparent 35%),
+    radial-gradient(circle at 85% 25%, #a6c1ee 0%, transparent 35%),
+    radial-gradient(circle at 50% 90%, #c2e9fb 0%, transparent 40%),
+    linear-gradient(135deg, #e0c3fc, #d9e9ff, #fce4ec);
+
+  background-attachment: fixed;
   font-family: Arial, sans-serif;
   color: #17243a;
 }
 
+/* Карточка */
 main {
   width: 100%;
   max-width: 400px;
-  padding: 32px 22px;
-  border-radius: 24px;
-  background: white;
+  padding: 35px 22px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.92);
   text-align: center;
-  box-shadow: 0 8px 30px #17365d15;
+  box-shadow: 0 15px 50px rgba(49, 65, 120, 0.18);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.8);
 }
 
 h1 {
   font-size: 28px;
-  margin-bottom: 12px;
+  color: #293c68;
+  margin-top: 0;
 }
 
 p {
@@ -44,54 +56,47 @@ p {
   margin-bottom: 25px;
 }
 
-.button {
+/* Кнопки */
+a.button {
   display: block;
-  margin-top: 16px;
+  margin-top: 18px;
   padding: 19px 12px;
   border-radius: 14px;
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
-  transition: 0.2s;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
 }
 
-.button:hover {
-  opacity: 0.88;
-  transform: translateY(-2px);
+a.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 20px rgba(0,0,0,0.16);
 }
 
 .telegram {
-  background: #229ed9;
+  background: linear-gradient(135deg, #229ed9, #1476bd);
 }
 
 .disk {
-  background: #174ea6;
-}
-
-.personal {
-  background: #168cba;
+  background: linear-gradient(135deg, #3975d7, #174ea6);
 }
 
 .contact {
-  background: #239b70;
+  background: linear-gradient(135deg, #36bd91, #16845e);
+  cursor: pointer;
 }
 
+/* Контактная информация */
 #contactInfo {
   display: none;
   margin-top: 20px;
-  padding: 20px 10px;
+  padding: 18px 10px;
   border-radius: 14px;
   background: #edf8f3;
-  line-height: 1.8;
-}
-
-#contactInfo strong {
-  font-size: 18px;
+  line-height: 1.7;
+  animation: appear 0.3s ease;
 }
 
 #contactInfo a {
@@ -99,6 +104,17 @@ p {
   font-size: 21px;
   font-weight: bold;
   text-decoration: none;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 </style>
@@ -124,24 +140,13 @@ target="_blank">
 ☁️ Мой Яндекс Диск
 </a>
 
-<a class="button personal"
-href="https://t.me/Motorina_pro"
-target="_blank">
-💬 Написать мне в Telegram
+<a class="button contact" onclick="showContact()">
+📞 Связаться со мной
 </a>
 
-<button class="button contact"
-onclick="showContact()">
-📞 Связаться со мной
-</button>
-
 <div id="contactInfo">
-  <strong>Людмила Николаевна</strong>
-  <br>
-  📞
-  <a href="tel:+79094585433">
-    8 909 458 54 33
-  </a>
+  <strong>Людмила Николаевна</strong><br>
+  📞 <a href="tel:+79094585433">8 909 458 54 33</a>
 </div>
 
 </main>
